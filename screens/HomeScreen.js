@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 
 import TimeSpanButton from './../components/button';
+import Graph from './../components/graph';
 
 export default class HomeScreen extends React.Component {
 
@@ -42,7 +43,7 @@ export default class HomeScreen extends React.Component {
             </View>
             <TimeSpanButton />
           </View>
-        
+          <Graph />
         </ScrollView>
         </SafeAreaView>
       </View>
@@ -60,10 +61,8 @@ const styles = StyleSheet.create({
   },
   topView: {
     flex: 1,
-    height: 120,
+    height: 90,
     backgroundColor: '#ffffff',
-    borderBottomColor: '#536878',
-    borderBottomWidth: 1,
   },
   timeSpan: {
     top: 20,
@@ -76,7 +75,7 @@ const styles = StyleSheet.create({
   },
   bigDate: {
     fontWeight: '900',
-    color: '#109689',
+    color: '#00C2A8',
     height: 20,
     flex: 1,
     fontSize: 18,
