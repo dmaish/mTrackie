@@ -31,10 +31,10 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 4.35,
         shadowOffset: {
-            height: 9,
+            height: 5,
             width: 0,
         },
-        elevation: 60,
+        elevation: 20,
     }
     });
 

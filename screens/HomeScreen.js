@@ -4,17 +4,19 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
   SafeAreaView,
   StatusBar,
-  Button,
+  Dimensions
 } from 'react-native';
+import * as PoiretOne from './../assets/fonts/PoiretOne-Regular.ttf'
 
 import TimeSpanButton from './../components/button';
 import Graph from './../components/graph';
+const { width } = Dimensions.get('window');
 
 export default class HomeScreen extends React.Component {
+
 
   componentWillMount(){
     this.statusBarHeightMargin = 0;
@@ -22,6 +24,7 @@ export default class HomeScreen extends React.Component {
         this.statusBarHeightMargin = StatusBar.currentHeight;
     }
   }
+
 
   static navigationOptions = {
     header: null,
@@ -40,10 +43,12 @@ export default class HomeScreen extends React.Component {
                 <Text style={styles.smallDate}>
                   20th-31st
                 </Text>
-            </View>
+            </View> 
             <TimeSpanButton />
           </View>
+          <View style={styles.graphHolder}>
           <Graph />
+          </View>
         </ScrollView>
         </SafeAreaView>
       </View>
@@ -61,8 +66,8 @@ const styles = StyleSheet.create({
   },
   topView: {
     flex: 1,
-    height: 90,
-    backgroundColor: '#ffffff',
+    height: 70,
+    backgroundColor: "#ffffff",
   },
   timeSpan: {
     top: 20,
@@ -72,6 +77,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',
+    fontFamily: 'space-mono',
   },
   bigDate: {
     fontWeight: '900',
@@ -86,4 +92,19 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#b2b8b8'
   },
+  moneyStats: {
+    flex: 1,
+    height: 50,
+    backgroundColor: '#ffffff',
+  },
+  totalMoney: {
+    top: 25,
+    left: 250, 
+    fontStyle: 'italic',
+  },
+  graphHolder: {
+    flex: 1,
+    marginLeft: 3,
+    marginRight: 3,
+  }
 });
