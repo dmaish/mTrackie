@@ -9,11 +9,9 @@ import {
   StatusBar,
   Dimensions
 } from 'react-native';
-import * as PoiretOne from './../assets/fonts/PoiretOne-Regular.ttf'
 
 import TimeSpanButton from './../components/button';
 import Graph from './../components/graph';
-const { width } = Dimensions.get('window');
 
 export default class HomeScreen extends React.Component {
 
@@ -59,7 +57,7 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
   },
   contentContainer: {
     paddingTop: 30,
@@ -81,8 +79,8 @@ const styles = StyleSheet.create({
   },
   bigDate: {
     fontWeight: '900',
-    color: '#00C2A8',
-    height: 20,
+    color: '#1cc281',
+    height: 25,
     flex: 1,
     fontSize: 18,
   },
@@ -103,7 +101,9 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   graphHolder: {
-    flex: 1,
+    backgroundColor: '#f0fcf9',
+    alignItems: 'center',
+    justifyContent: 'center',
     marginLeft: 3,
     marginRight: 3,
   }
